@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD MOTORSPORTS</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #car-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    
+    .car {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px;
+        padding: 10px;
+        width: 300px;
+    }
+    
+    .car img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .car h2 {
+        margin-top: 0;
+    }
+    
+    button {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+    }
+
+    
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>HD MOTORSPORTS</h1>
+    </header>
+    <main id="car-list">
+        
+    </main>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        const carList = document.getElementById('car-list');
+    
+        
+        const cars = [
+            { id: 1, name: 'Golf GTI', price: 30000, image: 'vwgolfgti.jpg.jpg' },
+            { id: 2, name: 'BMW M3 GTS', price: 25000, image: 'BMWM3GTS.jpg' },
+            { id: 3, name: 'Porsche911', price: 250000, image: 'porsche911R.jpg' },
+            { id: 4, name: 'shelbyGT500', price: 70000, image: 'shelbyGT500.jpg' },
+            { id: 5, name: 'corvette ZR1', price: 50000, image: 'corvettezr1.webp' },
+            { id: 6, name: 'Nissan GTR R34', price: 500000, image: 'GTRR34.jpg' }, 
+            { id: 7, name: 'Toyota supra mk4', price: 300000, image: 'ToyotaSupra.jpg' },
+            
+        ];
+    
+       
+        cars.forEach(car => {
+            const carElement = document.createElement('div');
+            carElement.classList.add('car');
+            carElement.innerHTML = `
+                <img src="${car.image}" alt="${car.name}">
+                <h2>${car.name}</h2>
+                <p>Preço: $${car.price}</p>
+                <button onclick="addToCart(${car.id})">Adicionar ao Carrinho</button>
+            `;
+            carList.appendChild(carElement);
+        });
+    });
+    
+    function addToCart(carId) {
+        
+        alert(`Carro com ID ${carId} adicionado ao carrinho.`);
+    }
+
+    function validatelogin(){
+        var username = document.getElementById('username').value;
+
+        var password = document.getElementById('password').value;
+
+        if(username === 'admin' && password === '123'){
+            alert
+            alet('login bem-sucedido!');
+        }else{
+
+            alert
+        alert('credenciais invalidas. tente novamente.') 
+
+        }
+    }
+    </script>
+</body>
+</html>
