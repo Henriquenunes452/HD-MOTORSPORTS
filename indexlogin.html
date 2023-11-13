@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HD MOTORSPORTS</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color:white;
+        background-image: url(pandatrueno.jpg);
+    }
+     
+    
+    .login-container{
+        background-color:transparent;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px(0,0,0,0.7);
+        
+
+    }
+
+    form-group{
+        margin-bottom: 10px;
+    }
+
+    label{
+        display:block;
+        margin-bottom: 8px;
+    }
+
+    input{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+
+    }
+
+    button {
+        background-color: aliceblue;
+        color:black;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor:pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">password:</label>
+            <input type="password" id="password" required>
+            <button type="button" onclick="checklogin()">login</button>
+        </form>
+    </div>
+    <script>
+
+        function checklogin(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password ==="123"){
+
+                window.location.href ='indexphp.html';
+            }else {
+                alert("Nome ou Senha invalida tente novamente!!");
+            }
+        }
+    </script>
+</body>
+</html>
